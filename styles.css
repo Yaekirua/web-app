@@ -1,0 +1,297 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #c5c6c7;
+    font-size: 1.1em;
+}
+
+/* Header styles */
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: black; /* Set header background to black */
+    color: white; /* Set text color to white */
+    z-index: 1000; /* Ensure the header is above other content */
+    padding: 10px;
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Stack the elements (h1 and nav) vertically */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.header h1 {
+    font-size: 1.8rem; /* Reduced font size for smaller devices */
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(1, 217, 255, 0.8),
+                 0 0 20px rgba(4, 49, 81, 0.909),
+                 0 0 30px rgba(40, 15, 227, 0.4);
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+    justify-content: center; /* Center buttons horizontally */
+    gap: 10px; /* Add spacing between buttons */
+}
+
+.nav button {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px; /* Reduced padding for smaller screens */
+    font-size: 1em; /* Adjusted font size */
+    font-weight: 600;
+    transition: all 0.3s;
+    width: auto; /* Ensure buttons resize naturally */
+}
+
+.nav button:hover {
+    background-color: #0a0101;
+    color: #000;
+    box-shadow: 0 4px 8px rgba(0, 34, 88, 0.2);
+    text-shadow: 0 0 8px rgb(27, 179, 221),
+                 0 0 12px rgba(5, 103, 168, 0.6),
+                 0 0 16px rgba(4, 29, 81, 0.493);
+}
+/* Header hidden class (for hiding header) */
+.header.scrolled {
+    padding: 5px 20px; /* Reduced padding when scrolled */
+    font-size: 1.2rem; /* Smaller font size when scrolled */
+    transition: padding 0.3s, font-size 0.3s;
+}
+
+/* Header scrolled class (for shrinking header) */
+.header.hidden {
+    transform: translateY(-100%); /* Moves the header up to hide it */
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Hero Section */
+/* Hero Section */
+/* Hero Section */
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    text-align: center; /* Center text alignment */
+    overflow: hidden; /* Prevent content overflow */
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire hero section without distortion */
+    z-index: -1; /* Send the video to the background */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay for text readability */
+    z-index: 0;
+}
+
+.content {
+    z-index: 1; /* Bring content above the background */
+    color: #ffffff;
+    padding: 20px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); /* Subtle text shadow for better contrast */
+}
+
+.content h2 {
+    font-size: 2.5em; /* Responsive font size */
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(1, 217, 255, 0.8),
+                 0 0 20px rgba(4, 49, 81, 0.9),
+                 0 0 30px rgba(40, 15, 227, 0.4);
+}
+
+.content h2:hover {
+    text-shadow: 0 0 15px rgb(20, 14, 210),
+                 0 0 30px rgba(57, 68, 227, 0.8),
+                 0 0 45px rgba(13, 93, 198, 0.6);
+}
+
+.content p {
+    font-size: 1.2em;
+    margin: 10px 0 20px;
+    font-weight: 500;
+    text-shadow: 0 0 5px rgba(1, 145, 209, 0.8),
+                 0 0 10px rgba(5, 103, 168, 0.6),
+                 0 0 15px rgba(4, 29, 81, 0.5);
+}
+
+.cta-btn {
+    background-color: #01a5f7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cta-btn:hover {
+    background-color: #061c98;
+    transform: scale(1.05);
+}
+
+
+
+/* Content styles */
+.content {
+    text-align: center; /* Center the text */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Optional overlay for readability */
+    border-radius: 10px; /* Optional rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Optional shadow for aesthetics */
+}
+
+.content h2 {
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(1, 217, 255, 0.8),
+                 0 0 20px rgba(4, 49, 81, 0.909),
+                 0 0 30px rgba(40, 15, 227, 0.4);
+}
+
+.content p {
+    font-size: 1.5em;
+    margin-top: 10px;
+    text-shadow: 0 0 5px rgba(1, 145, 209, 0.8),
+                 0 0 10px rgba(5, 103, 168, 0.6),
+                 0 0 15px rgba(4, 29, 81, 0.493);
+}
+
+.section {
+    background-color: #1e1e1e;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(216, 25, 216, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: auto; /* Dynamically adjust width */
+    max-width: 90%; /* Prevent it from being too wide */
+    margin: 20px auto; /* Center-align the section */
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.section h3 {
+    color: #f1f1f1;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section p {
+    color: #e0e0e0;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.section li {
+    color: #d9d9d9;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 10px;
+    padding-left: 30px; /* Reduced padding-left for left alignment */
+    position: relative;
+    text-shadow: 0 0 5px #50b3a2, 0 0 10px #28958e, 0 0 15px #127974;
+}
+
+.section li::before {
+    content: "➤";
+    position: absolute;
+    left: 0;
+    color: #ff5722;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+
+.section a {
+    color: #ff8a50;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+}
+
+.section a:hover {
+    color: #ff5722;
+    text-decoration: underline;
+}
+.video-section video {
+    border: none; /* Removes default border */
+    border-radius: 10px; /* Smooth rounded corners */
+    box-shadow: 0 0 10px rgba(13, 190, 217, 0.4),
+                0 0 20px rgba(13, 190, 217, 0.3),
+                0 0 30px rgba(13, 190, 217, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.video-section video:hover {
+    box-shadow: 0 0 15px rgba(13, 190, 217, 0.6),
+                0 0 30px rgba(13, 190, 217, 0.5),
+                0 0 45px rgba(13, 190, 217, 0.4);
+    transform: scale(1.02); /* Slight zoom on hover */
+}
+
+.video-section p {
+    color: #d9d9d9; /* Light gray for readability */
+    font-size: 1rem;
+    margin-top: 10px;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.2),
+                 0 0 5px rgba(13, 190, 217, 0.3);
+}
+@media screen and (max-width: 768px) {
+    .nav {
+        display: flex; /* Use flexbox for alignment */
+        flex-wrap: wrap; /* Allow wrapping to the next line */
+        justify-content: center; /* Center the buttons horizontally */
+        gap: 15px; /* Add spacing between buttons */
+    }
+
+    .nav button, .nav a { /* Target buttons or links in the navigation */
+        flex: 1 0 auto; /* Allow buttons to shrink or grow as needed */
+        text-align: center; /* Center text inside buttons */
+        padding: 10px 15px; /* Add padding for touch-friendly buttons */
+        font-size: 1em; /* Keep font size readable */
+        background-color: transparent; /* Optional: Keep the background transparent */
+        border: none; /* Remove borders (optional) */
+    }
+}

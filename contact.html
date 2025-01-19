@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact us to learn more about Anti-Scam Awareness. Find our location, give feedback, or get in touch with our team!">
+    <title>Contact Us - Anti-Scam Awareness</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Instagram icon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #c5c6c7;
+        }
+
+        /* Header styles */
+        .header {
+            background-color: rgba(0, 0, 0, 0.9);
+            color: #fff;
+            padding: 15px 20px; /* Reduced padding for a smaller header */
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .header h1 {
+            font-size: 2rem; /* Smaller font for title */
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(1, 217, 255, 0.8), 0 0 20px rgba(4, 49, 81, 0.9);
+        }
+
+        .nav {
+            margin-top: 10px;
+        }
+
+        .nav button {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            margin: 0 10px;
+            padding: 10px 15px; /* Adjusted padding for smaller buttons */
+            cursor: pointer;
+            font-size: 1rem; /* Smaller button text */
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .nav button:hover {
+            color: #000;
+            text-shadow: 0 0 5px #00d1ff, 0 0 10px #00d1ff, 0 0 15px #00d1ff;
+        }
+
+        /* Content layout */
+        .content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        /* Flip effect styles */
+        .card {
+            perspective: 1000px;
+            width: 240px;
+            height: 300px;
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        /* Front and back styles */
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .card-front {
+            background: linear-gradient(to left, #10789b, #180066);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 15px rgba(0, 102, 255, 0.8);
+        }
+
+        .card-back {
+            background-color: #181818;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transform: rotateY(180deg);
+            box-shadow: 0 0 15px rgba(0, 102, 255, 0.6);
+        }
+
+        /* Glowing Text */
+        .content-text {
+            padding: 10px;
+            font-size: 1.1rem;
+            text-align: center;
+            text-shadow: 0 0 5px #00d1ff, 0 0 10px #00d1ff, 0 0 15px #00d1ff;
+        }
+
+        .title {
+            font-weight: bold;
+            font-size: 1.5rem; /* Slightly larger title */
+            text-shadow: 0 0 10px rgba(0, 102, 255, 0.9);
+        }
+
+        .content-text img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px; /* Match the card's border-radius */
+        }
+
+        /* Footer styles */
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #000;
+            color: #fff;
+            margin-top: 20px;
+            font-size: 1rem; /* Increased footer font size */
+        }
+
+        /* Specific styling for Our Location section */
+        .location-card {
+            width: 750px;
+            height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            border: 2px solid rgba(0, 102, 255, 0.7);
+            box-shadow: 0 0 10px #00194f, 0 0 20px #3052ff, 0 0 30px #000000;
+        }
+
+        .location-card iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Specific styles for the "Give Feedback" button */
+        .feedback-button {
+            display: inline-block;
+            width: 150px;
+            height: 50px;
+            border-radius: 10px;
+            border: 1px solid #03045e;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s ease-in;
+            z-index: 1;
+        }
+
+        .feedback-button::before,
+        .feedback-button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 0;
+            height: 100%;
+            transform: skew(15deg);
+            transition: all 0.5s;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .feedback-button::before {
+            left: -10px;
+            background: #060878;
+        }
+
+        .feedback-button::after {
+            right: -10px;
+            background: #29189a;
+        }
+
+        .feedback-button:hover::before,
+        .feedback-button:hover::after {
+            width: 58%;
+        }
+
+        .feedback-button:hover span {
+            color: #ffffff;
+            transition: 0.3s;
+        }
+
+        .feedback-button span {
+            color: #03045e;
+            font-size: 18px;
+            transition: all 0.3s ease-in;
+        }
+
+        /* Instagram icon link styling */
+        .instagram-link {
+            font-size: 1.3rem;
+            color: #E1306C;
+            margin-left: 8px;
+            text-decoration: none;
+        }
+
+        .instagram-link:hover {
+            color: #bc2a8d;
+        }
+
+        /* Improved layout for the team member list */
+        .team-member {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .team-member a {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .team-member a .fab {
+            margin-left: 5px;
+        }
+
+        .team-member strong {
+            font-weight: bold;
+        }
+
+        /* Scrollable team member container */
+        .team-member-list {
+            max-height: 300px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header" id="header">
+        <h1>Anti-Scam Awareness</h1>
+        <div class="nav">
+            <button onclick="navigateTo('index.html')">Home</button>
+            <button onclick="navigateTo('tips.html')">Animation Video</button>
+            <button onclick="navigateTo('videos.html')">Videos</button>
+            <button onclick="navigateTo('contact.html')">Contact</button>
+            <button onclick="navigateTo('team.html')">Our Team</button>
+            <button onclick="navigateTo('phishing.html')">Prevent Tips</button>
+        </div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <!-- Team Section -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <p class="title">Our Team</p>
+                </div>
+                <div class="card-back">
+                    <div class="content-text">
+                        <div class="team-member-list">
+                            <ul style="text-align: left; padding-left: 0;">
+                                <li class="team-member">
+                                    <strong>1. HIZAL HAZREEN HAZIQ</strong><br>
+                                    Phone: 012-3456789<br>
+                                    <a href="https://www.instagram.com/hizalhaziq" target="_blank" class="instagram-link">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li class="team-member">
+                                    <strong>2. AYDEEN REEZMAN</strong><br>
+                                    Phone: 019-8765432<br>
+                                    <a href="https://www.instagram.com/aydeenreezman" target="_blank" class="instagram-link">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li class="team-member">
+                                    <strong>3. IRFAN</strong><br>
+                                    Phone: 013-9876543<br>
+                                    <a href="https://www.instagram.com/irfan" target="_blank" class="instagram-link">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li class="team-member">
+                                    <strong>4. AKMAL</strong><br>
+                                    Phone: 017-6543210<br>
+                                    <a href="https://www.instagram.com/akmal" target="_blank" class="instagram-link">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li class="team-member">
+                                    <strong>5. FARHAN ISKANDAR</strong><br>
+                                    Phone: 018-1122334<br>
+                                    <a href="https://www.instagram.com/farhaniskandar" target="_blank" class="instagram-link">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feedback Section -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <p class="title">Feedback</p>
+                </div>
+                <div class="card-back">
+                    <div class="content-text">
+                        <p>Send feedback using UiTM email:</p>
+                        <button class="feedback-button" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSe5PbXEoFyAtUS1D8T98Xxf7_z4BtNOWu_F8H2cDFr5f4e6Tw/viewform'">
+                            <span>Give Feedback</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thank You Section -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <p class="title">Thank You!</p>
+                </div>
+                <div class="card-back">
+                    <div class="content-text">
+                        <img src="https://media.tenor.com/bdydAWRTlOgAAAAi/cute-girl.gif" alt="Thank You Anime Gif">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Location Section -->
+    <div class="content">
+        <div class="card location-card">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31716.527042110843!2d100.277799!3d6.449738000000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304ddb9b96e93f29%3A0x7f2ef3d96bb0139f!2sUiTM%20Pulau%20Pinang%20Campus!5e0!3m2!1sen!2smy!4v1672682342769!5m2!1sen!2smy" 
+                width="100%" 
+                height="100%" 
+                frameborder="0" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>&copy; 2025 Anti-Scam Awareness | All rights reserved.</p>
+    </div>
+
+    <script>
+        // Function to navigate between pages
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

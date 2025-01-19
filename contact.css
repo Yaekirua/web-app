@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.nav button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav button:hover {
+    background-color: #01a5f7;
+}
+
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.contact-persons ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-persons ul li {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.contact-persons ul li a {
+    color: #01a5f7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-persons ul li a:hover {
+    text-decoration: underline;
+}
+
+.cta-btn {
+    background-color: #01a5f7;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #0056a5;
+}
+
+.gif-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.gif-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

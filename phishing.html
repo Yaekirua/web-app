@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact us to learn more about Anti-Scam Awareness. Find our location, give feedback, or get in touch with our team!">
+    <title>Contact Us - Anti-Scam Awareness</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #c5c6c7;
+        }
+
+        /* Header styles */
+        .header {
+            background-color: rgba(0, 0, 0, 0.9);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(1, 217, 255, 0.8), 0 0 20px rgba(4, 49, 81, 0.9);
+        }
+
+        .nav {
+            margin-top: 10px;
+        }
+
+        .nav button {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            margin: 0 10px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .nav button:hover {
+            color: #000;
+            text-shadow: 0 0 5px #00d1ff, 0 0 10px #00d1ff, 0 0 15px #00d1ff;
+        }
+
+        /* Content layout */
+        .content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        /* Flip effect styles */
+        .card {
+            perspective: 1000px;
+            width: 240px;
+            height: 300px;
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        /* Front and back styles */
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .card-front {
+            background: linear-gradient(to left, #10789b, #180066);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 15px rgba(0, 102, 255, 0.8);
+        }
+
+        .card-back {
+            background-color: #181818;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transform: rotateY(180deg);
+            box-shadow: 0 0 15px rgba(0, 102, 255, 0.6);
+            padding: 10px;
+            text-align: center;
+        }
+
+        .title {
+            font-weight: bold;
+            font-size: 1.4rem;
+            text-shadow: 0 0 10px rgba(0, 102, 255, 0.9);
+        }
+
+        .content-text {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        /* Footer styles */
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #000;
+            color: #fff;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header" id="header">
+        <h1>Anti-Scam Awareness</h1>
+        <div class="nav">
+            <button onclick="navigateTo('index.html')">Home</button>
+            <button onclick="navigateTo('tips.html')">Animation Video</button>
+            <button onclick="navigateTo('videos.html')">Videos</button>
+            <button onclick="navigateTo('contact.html')">Contact</button>
+            <button onclick="navigateTo('team.html')">Our Team</button>
+            <button onclick="navigateTo('phishing.html')">Prevent Tips</button>
+        </div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <!-- Card 1 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <p class="title">Tip 1</p>
+                </div>
+                <div class="card-back">
+                    <p class="content-text">Never click on suspicious links in emails or messages. Always verify the sender first.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <p class="title">Tip 2</p>
+                </div>
+                <div class="card-back">
+                    <p class="content-text">Avoid sharing personal information like passwords or bank details via email.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <p class="title">Tip 3</p>
+                </div>
+                <div class="card-back">
+                    <p class="content-text">Check for HTTPS in website URLs before entering sensitive information.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <p class="title">Tip 4</p>
+                </div>
+                <div class="card-back">
+                    <p class="content-text">Be cautious of offers that seem too good to be true. Verify their authenticity.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <p class="title">Tip 5</p>
+                </div>
+                <div class="card-back">
+                    <p class="content-text">Keep your devices updated with the latest security patches and antivirus software.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <p class="title">Tip 6</p>
+                </div>
+                <div class="card-back">
+                    <p class="content-text">Always report phishing attempts to your email provider or IT team.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">© 2025 Created By HIZAL HAZREEN HAZIQ. All Rights Reserved.</footer>
+
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

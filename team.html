@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - Anti-Scam Awareness</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: #c5c6c7;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: rgba(0, 0, 0, 0.9);
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(1, 217, 255, 0.8);
+        }
+
+        .nav {
+            margin-top: 10px;
+        }
+
+        /* Navbar Buttons with Glow Effect */
+        .nav button {
+            background-color: #000; /* Dark blue background */
+            color: #fff; /* Initial text color */
+            border: none;
+            border-radius: 5px;
+            margin: 0 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: color 0.4s ease, text-shadow 0.4s ease; /* Smooth transition */
+        }
+
+        .nav button:hover {
+            background-color: #000000; /* Dark blue background on hover */
+            color: #000; /* Black text color */
+            text-shadow: 0 0 15px #00d1ff, 0 0 20px #00d1ff; /* Stronger glow on hover */
+        }
+
+        /* Team Section */
+        .content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .team-section h2 {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px #00d1ff;
+        }
+
+        .team-section p {
+            font-size: 1.2rem;
+            color: #e0e0e0;
+            margin-bottom: 40px;
+        }
+
+        /* Team Grid */
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .team-grid .single-row {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Flip Card */
+        .card {
+            perspective: 1000px;
+            width: 220px;
+            height: 300px;
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.6s ease;
+        }
+
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front,
+        .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .card-front {
+            background: #102286;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0, 217, 255, 0.7);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .card-front:hover {
+            box-shadow: 0 0 25px rgba(0, 217, 255, 1);
+        }
+
+        .card-front h3 {
+            font-size: 1.4rem;
+            margin: 10px 0;
+            font-weight: bold;
+            color: #eaeaea;
+        }
+
+        .card-front p {
+            font-size: 0.9rem;
+            color: #ffffff;
+            margin: 5px 0;
+        }
+
+        .card-back {
+            background: #000000;
+            color: #000;
+            transform: rotateY(180deg);
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-back img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .card-back h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .card-back p {
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #000;
+            color: #fff;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>Anti-Scam Awareness</h1>
+        <div class="nav">
+            <button onclick="navigateTo('index.html')">Home</button>
+            <button onclick="navigateTo('tips.html')">Animation Video</button>
+            <button onclick="navigateTo('videos.html')">Videos</button>
+            <button onclick="navigateTo('contact.html')">Contact</button>
+            <button onclick="navigateTo('team.html')">Our Team</button>
+            <button onclick="navigateTo('phishing.html')">Prevent Tips</button>
+        </div>
+    </div>
+
+    <!-- Team Section -->
+    <div class="content">
+        <div class="team-section">
+            <h2>Meet Our Team</h2>
+            <p>Here are the people dedicated to raising awareness about scams and keeping you informed:</p>
+            <div class="team-grid">
+                <!-- First Row -->
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3>IRFAN</h3>
+                            <p>Matric Number: SAYA HENSEM</p>
+                            <p>Role: Researcher</p>
+                        </div>
+                        <div class="card-back">
+                            <img src="assets/gamba-ipan.jpg" alt="IRFAN">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3>HIZAL HAZREEN HAZIQ</h3>
+                            <p>Matric Number: 2024404914</p>
+                            <p>Role: Developer</p>
+                        </div>
+                        <div class="card-back">
+                            <img src="assets/gamba-aku.jpg" alt="Hizal">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3>AKMAL MUHAIMIN</h3>
+                            <p>Matric Number: NONE</p>
+                            <p>Role: Designer</p>
+                        </div>
+                        <div class="card-back">
+                            <img src="assets/gamba-akmal.JPG" alt="Akmal">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3>FARHAN ISKANDAR</h3>
+                            <p>Matric Number: NONE</p>
+                            <p>Role: Content Writer</p>
+                        </div>
+                        <div class="card-back">
+                            <img src="assets/gambar-paan.jpg" alt="Farhan">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Row -->
+            <div class="team-grid single-row">
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3>AYDEEN REEZMAN</h3>
+                            <p>Matric Number: NONE</p>
+                            <p>Role: Marketing</p>
+                        </div>
+                        <div class="card-back">
+                            <img src="assets/gambar-manYihaa.png" alt="Aydeen">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">© 2025 Created By HIZAL HAZREEN HAZIQ. All Rights Reserved.</div>
+
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

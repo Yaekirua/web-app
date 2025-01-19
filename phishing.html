@@ -59,72 +59,57 @@
         /* Content layout */
         .content {
             padding: 20px;
-            max-width: 1200px;
+            max-width: 800px;
             margin: 20px auto;
             display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        /* Flip effect styles */
-        .card {
-            perspective: 1000px;
-            width: 240px;
-            height: 300px;
-        }
-
-        .card-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            transition: transform 0.6s;
-            transform-style: preserve-3d;
-        }
-
-        .card:hover .card-inner {
-            transform: rotateY(180deg);
-        }
-
-        /* Front and back styles */
-        .card-front, .card-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .card-front {
-            background: linear-gradient(to left, #10789b, #180066);
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 0 15px rgba(0, 102, 255, 0.8);
-        }
-
-        .card-back {
-            background-color: #181818;
-            color: #fff;
-            display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            transform: rotateY(180deg);
-            box-shadow: 0 0 15px rgba(0, 102, 255, 0.6);
-            padding: 10px;
-            text-align: center;
+            gap: 20px;
         }
 
-        .title {
-            font-weight: bold;
+        .tip {
+            position: relative;
+            background-color: #000;
+            color: #fff;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 102, 255, 0.6);
+            overflow: hidden;
+            transition: color 0.3s ease;
+            z-index: 0;
+        }
+
+        .tip:hover {
+            color: #ffffff;
+        }
+
+        .tip::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background-color: #0056b3;
+            border-radius: 50%;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            transition: width 0.4s ease, height 0.4s ease;
+        }
+
+        .tip:hover::before {
+            width: 300%;
+            height: 300%;
+        }
+
+        .tip h2 {
+            margin: 0;
             font-size: 1.4rem;
+            font-weight: bold;
             text-shadow: 0 0 10px rgba(0, 102, 255, 0.9);
         }
 
-        .content-text {
+        .tip p {
+            margin: 10px 0 0;
             font-size: 1rem;
             line-height: 1.5;
         }
@@ -156,76 +141,29 @@
 
     <!-- Content Section -->
     <div class="content">
-        <!-- Card 1 -->
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">
-                    <p class="title">Tip 1</p>
-                </div>
-                <div class="card-back">
-                    <p class="content-text">Never click on suspicious links in emails or messages. Always verify the sender first.</p>
-                </div>
-            </div>
+        <div class="tip">
+            <h2>Tip 1: Never Give Out Personal Info</h2>
+            <p>Be cautious when asked for personal details, especially in unsolicited communications. Always verify the request before sharing any information.</p>
         </div>
-
-        <!-- Card 2 -->
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">
-                    <p class="title">Tip 2</p>
-                </div>
-                <div class="card-back">
-                    <p class="content-text">Avoid sharing personal information like passwords or bank details via email.</p>
-                </div>
-            </div>
+        <div class="tip">
+            <h2>Tip 2: Think Before You Click</h2>
+            <p>Phishing attempts often come in the form of links. Hover over the link first, and if it's suspicious, don't click on it.</p>
         </div>
-
-        <!-- Card 3 -->
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">
-                    <p class="title">Tip 3</p>
-                </div>
-                <div class="card-back">
-                    <p class="content-text">Check for HTTPS in website URLs before entering sensitive information.</p>
-                </div>
-            </div>
+        <div class="tip">
+            <h2>Tip 3: Verify Site's Security</h2>
+            <p>Before entering personal information on a website, check for HTTPS in the URL and ensure the site has an SSL certificate.</p>
         </div>
-
-        <!-- Card 4 -->
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">
-                    <p class="title">Tip 4</p>
-                </div>
-                <div class="card-back">
-                    <p class="content-text">Be cautious of offers that seem too good to be true. Verify their authenticity.</p>
-                </div>
-            </div>
+        <div class="tip">
+            <h2>Tip 4: Be Wary of Popups</h2>
+            <p>Pop-up ads and messages may be a sign of malicious intent. Don't click on them, especially if they seem too good to be true.</p>
         </div>
-
-        <!-- Card 5 -->
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">
-                    <p class="title">Tip 5</p>
-                </div>
-                <div class="card-back">
-                    <p class="content-text">Keep your devices updated with the latest security patches and antivirus software.</p>
-                </div>
-            </div>
+        <div class="tip">
+            <h2>Tip 5: Keep Your Browser Up-to-Date</h2>
+            <p>Ensure your browser and its security features are always up to date. Modern browsers offer essential protection against phishing and scams.</p>
         </div>
-
-        <!-- Card 6 -->
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">
-                    <p class="title">Tip 6</p>
-                </div>
-                <div class="card-back">
-                    <p class="content-text">Always report phishing attempts to your email provider or IT team.</p>
-                </div>
-            </div>
+        <div class="tip">
+            <h2>Tip 6: Report Suspicious Activity</h2>
+            <p>If you suspect you've encountered a phishing attempt, report it to the relevant authorities or your email provider immediately.</p>
         </div>
     </div>
 
